@@ -1,0 +1,147 @@
+---
+layout: default
+---
+
+<!-- Page Header -->
+{% if page.background %}
+<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+  {% else %}
+  <header class="masthead">
+    {% endif %}
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>{{ site.title }}</h1>
+            {% if site.description %}
+            <span class="subheading">{{ site.description }}</span>
+            {% endif %}
+            <a class="ct-btn-scroll ct-js-btn-scroll" href="#posts-list">
+              <img alt="Arrow Down Icon" src="{{ site.baseurl }}/img/keyboard-down-arrow.png">
+            </a>          
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div class="container" id="posts-list">
+    <div class="row">
+      <div class="col-lg-6 col-md-10 mx-auto">
+        
+        {{ content }}
+      
+        {% for post in site.posts limit : 5 %}
+			
+        <div class="w3-panel w3-card-4">
+          <img class="img-fluid" src="{{ site.baseurl }}{{ post.background }}" alt="Grammer Test">
+
+          <article class="post-preview">
+          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+            <h2 class="post-title">{{ post.title }}</h2>
+            {% if post.subtitle %}
+            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+            {% else %}
+            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+            {% endif %}
+          </a>
+          <p class="post-meta">Posted by
+            {% if post.author %}
+            {{ post.author }}
+            {% else %}
+            {{ site.author }}
+            {% endif %}
+            on
+            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
+          </p>
+          </article>
+
+          <hr>
+            </div>
+
+        {% endfor %}	
+        <!-- Pager -->
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!--  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+
+        {{ content }}
+
+        <div class="w3-panel w3-card-4">
+			<img src="{{ site.baseurl }}/img/posts/logo/kids-books.jpg" alt="Grammer Test">
+			{% for post in site.posts limit : 5 %}
+
+			<article class="post-preview">
+			<a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+				<h2 class="post-title">{{ post.title }}</h2>
+				{% if post.subtitle %}
+				<h3 class="post-subtitle">{{ post.subtitle }}</h3>
+				{% else %}
+				<h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+				{% endif %}
+			</a>
+			<p class="post-meta">Posted by
+				{% if post.author %}
+				{{ post.author }}
+				{% else %}
+				{{ site.author }}
+				{% endif %}
+				on
+				{{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
+			</p>
+			</article>
+
+			<hr>
+
+			{% endfor %}
+			
+        </div>
+
+        {% for post in site.posts limit : 5 %}
+
+        <article class="post-preview">
+          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+            <h2 class="post-title">{{ post.title }}</h2>
+            {% if post.subtitle %}
+            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+            {% else %}
+            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+            {% endif %}
+          </a>
+          <p class="post-meta">Posted by
+            {% if post.author %}
+            {{ post.author }}
+            {% else %}
+            {{ site.author }}
+            {% endif %}
+            on
+            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
+          </p>
+        </article>
+
+        <hr>
+
+        {% endfor %}
+
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+-->
