@@ -4,6 +4,7 @@ title: "LiveWorksheet"
 subtitle: "Interactive EmSAT Worksheets Created by Rania Badr."
 date: 2021-07-06 23:45:13 -0400
 background: "/img/posts/worksheet.png"
+emoji: 📃
 ---
 
 
