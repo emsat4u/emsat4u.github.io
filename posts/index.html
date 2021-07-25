@@ -6,7 +6,7 @@ background: '/img/bg-post.jpg'
 
 {% for post in paginator.posts %}
 
-<article class="post-preview scale-up-top">
+<article class="post-preview scale-up-top" data-aos="fade-up-left" data-aos-duration="1400">
   <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
     <h2 class="post-title">{{ post.emoji }} {{ post.title }}</h2>
     {% if post.subtitle %}
