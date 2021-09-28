@@ -1,16 +1,6 @@
----
-layout: post
-title: "Grammar"
-subtitle: "Collection of EmSAT Grammar Tests."
-date: 2021-07-06 23:45:13 -0400
-background: "/img/posts/Grammar.png"
-emoji: 🎓
----
+I",<p class="h3">⏬Click on the link to select a test:</p>
 
-
-<p class="h3">⏬Click on the link to select a test:</p> 
-
-<br>
+<p><br /></p>
 <div class="text-primary">
     <a href="https://forms.office.com/pages/responsepage.aspx?id=GDmBaUijT0KBaEskboYkXF0nXcgvLaNEkgJwCbAPK1xUMkE3NzFSUE9NR1U2VEFVRjRWSDRPWDJIOS4u" target="_blank">
     • EmSAT- Grammar 1   (15 Questions / 6 minutes)
@@ -28,7 +18,7 @@ emoji: 🎓
     <p></p>
 
     <a href="https://wordwall.net/resource/5664321/emsat-comparatives-superlatives" target="_blank">
-    • EmSAT- Grammar 4 - Superlatives & Comparatives  
+    • EmSAT- Grammar 4 - Superlatives &amp; Comparatives  
     </a>
     <p></p>
 
@@ -66,4 +56,5 @@ emoji: 🎓
     • EmSAT- Grammar 11 - Possessive adjectives  
     </a>
 </div>
-<br>
+<p><br /></p>
+:ET
