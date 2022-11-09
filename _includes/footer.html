@@ -1,6 +1,4 @@
-<!-- Footer -->
-
-<hr>
+<!-- <hr> -->
 <script>
   AOS.init();
 </script>
@@ -8,7 +6,7 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="col-lg-8 col-md-10 mx-auto black-icon">
         <ul class="list-inline text-center">
           {% if site.email %}
           <li class="list-inline-item">
@@ -81,7 +79,15 @@
           </li>
           {% endif %}
         </ul>
-        <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p>
+
+        {% if page.title %}
+          <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }} Developed with ❤️ by <a href="https://www.linkedin.com/in/mo-eltahir/">MoEla</a></p>
+        {% else %}
+          <!-- only show if it's Home page -->
+          <p class="copyright text-white-50">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }} <br> Developed  with ❤️ by <a href="https://www.linkedin.com/in/mo-eltahir/" target="_blank" rel="noopener noreferred">MoEla</a></p>
+        {% endif %}
+
+          <p> </p>
       </div>
     </div>
   </div>
