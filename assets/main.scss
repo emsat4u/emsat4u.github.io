@@ -3,3 +3,20 @@
 ---
 
 @import "styles";
+
+
+.black-icon {
+  color: black !important;    
+}
+
+
+// Smooth Zoom
+.my_zoom {
+  transform-origin: 65% 75%;
+  transition: transform 1s, filter .5s ease-out;
+  filter: grayscale(50%);
+}
+.my_zoom:hover {
+  filter: grayscale(0);
+  transform: scale(1.09); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
