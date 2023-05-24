@@ -6,3 +6,8 @@ Gemfile.lock
 
 # Mac Stuff
 .DS*
+_site/
+.DS_Store
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
