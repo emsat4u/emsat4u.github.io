@@ -4,19 +4,58 @@
 
 @import "styles";
 
-
 .black-icon {
-  color: black !important;    
+  color: black !important;
 }
-
 
 // Smooth Zoom + greyScale
 .my_zoom {
   transform-origin: 65% 75%;
-  transition: transform 1s, filter .5s ease-out;
+  transition: transform 1s, filter 0.5s ease-out;
   filter: grayscale(50%);
 }
 .my_zoom:hover {
   filter: grayscale(0);
-  transform: scale(1.09); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(
+    1.09
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+/* Styling for the notification bar */
+.notification-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px;
+  z-index: 9999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+  text-align: center;
+  font-family: Arial, sans-serif;
+
+  margin-bottom: 60px;
+  display: none;
+}
+/* Styling for the close button */
+.notification-bar .close-button {
+  float: right;
+  cursor: pointer;
+
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1;
+  padding: 4px 4px 0 0;
+}
+.notification-bar .close-button:hover {
+  color: #f38c8c; /* Change color on hover if desired */
+}
+/* Media query for desktop devices */
+@media only screen and (min-width: 1024px) {
+  /* Styles specific to desktop */
+  .notification-bar {
+    display: block;
+  }
 }
