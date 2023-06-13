@@ -5,5 +5,7 @@
     "spellright.documentTypes": [
         "latex",
         "plaintext"
-    ]
+    ],
+    "editor.minimap.scale": 2,
+    "editor.minimap.autohide": true
 }
